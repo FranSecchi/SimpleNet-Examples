@@ -15,6 +15,8 @@ public class Player : NetBehaviour
     [SerializeField] private float rightLimit = 5f;
     [SerializeField] private Color color;
 
+    private CharacterController controller;
+
     protected override void OnNetSpawn()
     {
         if (player-1 != NetManager.ConnectionId())
@@ -23,26 +25,44 @@ public class Player : NetBehaviour
             return;
         }
         Own(NetManager.ConnectionId());
+        
+        // Get or add CharacterController component
+        controller = GetComponent<CharacterController>();
+        if (controller == null)
+        {
+            controller = gameObject.AddComponent<CharacterController>();
+        }
     }
 
     private void Update()
     {
+        Vector3 movement = Vector3.zero;
+
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && transform.position.y < topLimit)
         {
-            transform.Translate(Vector3.up * (speed * Time.deltaTime));
+            movement += Vector3.up;
         }
         if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && transform.position.y > bottomLimit)
         {
-            transform.Translate(Vector3.down * (speed * Time.deltaTime));
+            movement += Vector3.down;
         }
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && transform.position.x > leftLimit)
         {
-            transform.Translate(Vector3.left * (speed * Time.deltaTime));
+            movement += Vector3.left;
         }
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && transform.position.x < rightLimit)
         {
-            transform.Translate(Vector3.right * (speed * Time.deltaTime));
+            movement += Vector3.right;
         }
+
+        // Normalize movement vector to prevent faster diagonal movement
+        if (movement.magnitude > 0)
+        {
+            movement.Normalize();
+        }
+
+        // Apply movement using CharacterController
+        controller.Move(movement * speed * Time.deltaTime);
     }
 
     private void OnDrawGizmos()

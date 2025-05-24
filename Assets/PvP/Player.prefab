@@ -168,8 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationBackTime: 0.01
-  _interpolationSpeed: 10
+  _syncPosition: 0
+  _syncRotation: 1
+  _syncScale: 0
+  _interpolationBackTime: 0.2
+  _interpolationSpeed: 5
 --- !u!1 &6465998219824417183
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,8 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _syncPosition: 1
+  _syncRotation: 1
+  _syncScale: 0
   _interpolationBackTime: 0.05
-  _interpolationSpeed: 30
+  _interpolationSpeed: 15
 --- !u!114 &5170359341295200436
 MonoBehaviour:
   m_ObjectHideFlags: 0

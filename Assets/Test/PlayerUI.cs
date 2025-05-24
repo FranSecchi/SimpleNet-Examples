@@ -47,7 +47,7 @@ public class PlayerUI : NetBehaviour
     public void OnColorButtonClick()
     {
         if(!isOwned)
-            CallRPC("RequestColorChange", playerNum);
+            CallRPC("RequestColorChange", playerId + 2);
     }
     public void OnPingButtonClick()
     {

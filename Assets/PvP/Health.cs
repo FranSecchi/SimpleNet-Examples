@@ -14,7 +14,6 @@ public class Health : NetBehaviour
     private float invulnerabilityTimer = 0f;
     private Vector3 spawnPosition;
 
-
     protected override void OnNetStart()
     {
         spawnPosition = transform.position;
@@ -44,9 +43,11 @@ public class Health : NetBehaviour
     [NetRPC(Direction.ServerToClient)]
     private void Die()
     {
-        GetComponent<NetTransform>().Reset();
-        GetComponentInChildren<NetTransform>().Reset();
+        GetComponent<NetTransform>().PausePrediction();
+        GetComponentInChildren<NetTransform>().PausePrediction();
         transform.position = spawnPosition;
+        GetComponent<NetTransform>().ResumePrediction();
+        GetComponentInChildren<NetTransform>().ResumePrediction();
         lifes = 3;
     }
     

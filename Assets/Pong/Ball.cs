@@ -19,37 +19,34 @@ namespace NetPackage.Runtime
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
-            // Disable gravity
+
             rb.useGravity = false;
-            // Initialize speed
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            
             currentSpeed = initialSpeed;
-            // Start with random direction
             SetRandomDirection();
-            lastCollisionTime = -collisionCooldown; // Allow first collision immediately
+            lastCollisionTime = -collisionCooldown; 
+            
+            rb.velocity = direction * currentSpeed;
         }
 
-        private void Update()
-        {
-            // Move the ball using transform, keeping Z position constant
-            Vector3 movement = direction * currentSpeed * Time.deltaTime;
-            movement.z = 0; // Ensure no movement in Z axis
-            transform.Translate(movement);
-        }
+        // private void FixedUpdate()
+        // {
+        //     rb.velocity = direction * currentSpeed;
+        // }
 
         private void OnCollisionEnter(Collision collision)
         {
-            // Calculate reflection direction based on the collision normal
             Vector3 normal = collision.contacts[0].normal;
-            // Project the normal onto XY plane
             normal.z = 0;
             normal = normal.normalized;
             
-            // Reflect the direction and ensure it stays in XY plane
             direction = Vector3.Reflect(direction, normal);
             direction.z = 0;
             direction = direction.normalized;
 
-            // Only increase speed if enough time has passed since last collision
             if (Time.time - lastCollisionTime >= collisionCooldown)
             {
                 currentSpeed = Mathf.Min(currentSpeed + speedIncrease, maxSpeed);
@@ -59,9 +56,7 @@ namespace NetPackage.Runtime
 
         private void SetRandomDirection()
         {
-            // Generate random angle between 0 and 360 degrees
             float randomAngle = UnityEngine.Random.Range(0f, 360f);
-            // Convert angle to radians and create direction vector
             direction = new Vector3(
                 Mathf.Cos(randomAngle * Mathf.Deg2Rad),
                 Mathf.Sin(randomAngle * Mathf.Deg2Rad),

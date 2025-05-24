@@ -177,5 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationBackTime: 0.01
-  _interpolationSpeed: 50
+  _syncPosition: 1
+  _syncRotation: 1
+  _syncScale: 0
+  _interpolationBackTime: 0.2
+  _interpolationSpeed: 15

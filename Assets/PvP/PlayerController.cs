@@ -40,8 +40,7 @@ public class PlayerController : NetBehaviour
             enabled = false;
             return;
         }
-        Own(NetManager.ConnectionId());
-        Own(NetManager.ConnectionId());
+        Own(NetManager.ConnectionId(), true);
     }
 
     protected override void OnNetStart()
