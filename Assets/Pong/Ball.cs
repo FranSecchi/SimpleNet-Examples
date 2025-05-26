@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NetPackage.Network;
 using UnityEngine;
 
 namespace NetPackage.Runtime
@@ -18,6 +19,12 @@ namespace NetPackage.Runtime
 
         private void Start()
         {
+            if (!NetManager.IsHost)
+            {
+                GetComponent<Collider>().enabled = false;
+                enabled = false;
+                return;
+            }
             rb = GetComponent<Rigidbody>();
 
             rb.useGravity = false;
@@ -32,10 +39,10 @@ namespace NetPackage.Runtime
             rb.velocity = direction * currentSpeed;
         }
 
-        // private void FixedUpdate()
-        // {
-        //     rb.velocity = direction * currentSpeed;
-        // }
+        private void FixedUpdate()
+        {
+            rb.velocity = direction * currentSpeed;
+        }
 
         private void OnCollisionEnter(Collision collision)
         {

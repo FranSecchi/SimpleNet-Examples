@@ -12,7 +12,7 @@ public class PointCount : NetBehaviour
     [SerializeField] private Material material;
     [SerializeField] private GameObject fondo;
 
-    private int points = 0;
+    private int points = 5;
 
 
     private void OnCollisionEnter(Collision other)

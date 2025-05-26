@@ -318,7 +318,6 @@ GameObject:
   - component: {fileID: 106339203}
   - component: {fileID: 106339202}
   - component: {fileID: 106339206}
-  - component: {fileID: 106339208}
   - component: {fileID: 106339207}
   m_Layer: 0
   m_Name: Player
@@ -413,36 +412,39 @@ MonoBehaviour:
   _syncRotation: 0
   _syncScale: 0
   _positionThreshold: 0.01
-  _rotationThreshold: 0.01
+  _rotationThreshold: 0.05
   _scaleThreshold: 0.01
-  _interpolationBackTime: 0.05
-  _interpolationSpeed: 20
---- !u!143 &106339208
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106339200}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  _interpolationSpeed: 15
+  _interpolationCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxTeleportDistance: 20
+  _useVelocityBasedInterpolation: 1
+  _positionSmoothingFactor: 1
+  _rotationSmoothingFactor: 1
+  _scaleSmoothingFactor: 1
+  syncPrecision: 0.001
 --- !u!1 &213486796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,7 +1616,6 @@ GameObject:
   - component: {fileID: 977842011}
   - component: {fileID: 977842010}
   - component: {fileID: 977842014}
-  - component: {fileID: 977842016}
   - component: {fileID: 977842015}
   m_Layer: 0
   m_Name: Player2
@@ -1709,36 +1710,39 @@ MonoBehaviour:
   _syncRotation: 0
   _syncScale: 0
   _positionThreshold: 0.01
-  _rotationThreshold: 0.01
+  _rotationThreshold: 0.05
   _scaleThreshold: 0.01
-  _interpolationBackTime: 0.05
-  _interpolationSpeed: 20
---- !u!143 &977842016
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977842008}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  _interpolationSpeed: 15
+  _interpolationCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxTeleportDistance: 20
+  _useVelocityBasedInterpolation: 1
+  _positionSmoothingFactor: 1
+  _rotationSmoothingFactor: 1
+  _scaleSmoothingFactor: 1
+  syncPrecision: 0.001
 --- !u!1 &1135629203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2342,6 @@ GameObject:
   - component: {fileID: 1339691894}
   - component: {fileID: 1339691893}
   - component: {fileID: 1339691897}
-  - component: {fileID: 1339691899}
   - component: {fileID: 1339691898}
   m_Layer: 0
   m_Name: Player1
@@ -2433,36 +2436,39 @@ MonoBehaviour:
   _syncRotation: 0
   _syncScale: 0
   _positionThreshold: 0.01
-  _rotationThreshold: 0.01
+  _rotationThreshold: 0.05
   _scaleThreshold: 0.01
-  _interpolationBackTime: 0.05
-  _interpolationSpeed: 20
---- !u!143 &1339691899
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339691891}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  _interpolationSpeed: 15
+  _interpolationCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxTeleportDistance: 20
+  _useVelocityBasedInterpolation: 1
+  _positionSmoothingFactor: 1
+  _rotationSmoothingFactor: 1
+  _scaleSmoothingFactor: 1
+  syncPrecision: 0.001
 --- !u!1 &1629476368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,7 +2754,6 @@ GameObject:
   - component: {fileID: 1758607995}
   - component: {fileID: 1758607994}
   - component: {fileID: 1758607998}
-  - component: {fileID: 1758608000}
   - component: {fileID: 1758607999}
   m_Layer: 0
   m_Name: Player3
@@ -2843,36 +2848,39 @@ MonoBehaviour:
   _syncRotation: 0
   _syncScale: 0
   _positionThreshold: 0.01
-  _rotationThreshold: 0.01
+  _rotationThreshold: 0.05
   _scaleThreshold: 0.01
-  _interpolationBackTime: 0.05
-  _interpolationSpeed: 20
---- !u!143 &1758608000
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758607992}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  _interpolationSpeed: 15
+  _interpolationCurve:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxTeleportDistance: 20
+  _useVelocityBasedInterpolation: 1
+  _positionSmoothingFactor: 1
+  _rotationSmoothingFactor: 1
+  _scaleSmoothingFactor: 1
+  syncPrecision: 0.001
 --- !u!1 &1788461624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,8 +2893,9 @@ GameObject:
   - component: {fileID: 1788461627}
   - component: {fileID: 1788461626}
   - component: {fileID: 1788461625}
-  - component: {fileID: 1788461629}
   - component: {fileID: 1788461632}
+  - component: {fileID: 1788461629}
+  - component: {fileID: 1788461634}
   - component: {fileID: 1788461633}
   m_Layer: 0
   m_Name: Sphere
@@ -3021,17 +3030,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788461624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
+  m_Script: {fileID: 11500000, guid: eb2aede84c115394c9babfcda9c1cec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _syncPosition: 1
-  _syncRotation: 1
-  _syncScale: 1
+  _syncRotation: 0
+  _syncVelocity: 0
+  _syncProperties: 1
   _positionThreshold: 0.01
   _rotationThreshold: 0.01
-  _scaleThreshold: 0.01
-  _interpolationBackTime: 0.05
-  _interpolationSpeed: 15
+  _velocityThreshold: 0.1
+  _interpolationBackTime: 0.1
+  _interpolationSpeed: 12
+--- !u!54 &1788461634
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788461624}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 2
 --- !u!1 &1912252149
 GameObject:
   m_ObjectHideFlags: 0

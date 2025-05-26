@@ -15,8 +15,6 @@ public class Player : NetBehaviour
     [SerializeField] private float rightLimit = 5f;
     [SerializeField] private Color color;
 
-    private CharacterController controller;
-
     protected override void OnNetSpawn()
     {
         if (player-1 != NetManager.ConnectionId())
@@ -25,13 +23,6 @@ public class Player : NetBehaviour
             return;
         }
         Own(NetManager.ConnectionId());
-        
-        // Get or add CharacterController component
-        controller = GetComponent<CharacterController>();
-        if (controller == null)
-        {
-            controller = gameObject.AddComponent<CharacterController>();
-        }
     }
 
     private void Update()
@@ -61,8 +52,8 @@ public class Player : NetBehaviour
             movement.Normalize();
         }
 
-        // Apply movement using CharacterController
-        controller.Move(movement * speed * Time.deltaTime);
+        // Apply movement directly to transform
+        transform.position += movement * speed * Time.deltaTime;
     }
 
     private void OnDrawGizmos()
