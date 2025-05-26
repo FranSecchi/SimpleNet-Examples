@@ -10,7 +10,12 @@ public enum GameMode
 }
 public class MenuSelection : MonoBehaviour
 {
-    public GameObject panel;
+    public GameObject HostBtn;
+    public GameObject ClientBtn;
+    public GameObject PongBtn;
+    public GameObject PvPBtn;
+    public GameObject TestBtn;
+    public GameObject BackBtn;
     public GameObject hostMenu;
     public GameObject clientMenu;
     public static GameMode mode = GameMode.PvP;
@@ -19,17 +24,17 @@ public class MenuSelection : MonoBehaviour
     public void OnPong()
     {
         mode = GameMode.Pong;
-        panel.SetActive(true);
+        HostClient(true);
     }  
     public void OnPvP()
     {
         mode = GameMode.PvP;
-        panel.SetActive(true);
+        HostClient(true);
     }
     public void OnTest()
     {
         mode = GameMode.Test;
-        panel.SetActive(true);
+        HostClient(true);
     }
     public void OnHostButton()
     {
@@ -43,4 +48,16 @@ public class MenuSelection : MonoBehaviour
         clientMenu.SetActive(true);
         gameObject.SetActive(false);
     }
+
+    public void HostClient(bool activate)
+    {
+        HostBtn.SetActive(activate);
+        ClientBtn.SetActive(activate);
+        BackBtn.SetActive(activate);
+        
+        PongBtn.SetActive(!activate);
+        PvPBtn.SetActive(!activate);
+        TestBtn.SetActive(!activate);
+    }
+
 }

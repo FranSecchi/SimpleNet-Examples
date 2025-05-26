@@ -30,9 +30,10 @@ public class ClientPanel : MonoBehaviour
                 Debug.Log(discoveredServer.ServerName);
                 ServerInfo serverInfo = discoveredServer; 
                 GameObject go = Instantiate(serverTextPrefab, transform);
-                go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Server {serverInfo.ServerName}";
-                go.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"Max players {serverInfo.MaxPlayers}";
-                Button button = go.transform.GetChild(2).GetComponent<Button>();
+                go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{serverInfo.ServerName}";
+                go.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"Mode {serverInfo.GameMode}";
+                go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Max players {serverInfo.MaxPlayers}";
+                Button button = go.transform.GetChild(3).GetComponent<Button>();
                 if (button != null)
                 {
                     // Capture current serverInfo in a local variable to avoid closure issue

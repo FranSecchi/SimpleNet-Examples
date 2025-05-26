@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5643552842389868463}
   - component: {fileID: 385196581652773097}
   - component: {fileID: 2260651649124867535}
-  - component: {fileID: 4334717269793210112}
+  - component: {fileID: -2545768782532092409}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -165,7 +165,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &4334717269793210112
+--- !u!114 &-2545768782532092409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,15 +174,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9074971136409127316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
+  m_Script: {fileID: 11500000, guid: eb2aede84c115394c9babfcda9c1cec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _syncPosition: 1
-  _syncRotation: 0
-  _syncScale: 0
+  _syncRotation: 1
+  _syncVelocity: 1
+  _syncProperties: 1
+  syncPrecision: 0.001
   _positionThreshold: 0.01
   _rotationThreshold: 0.01
-  _scaleThreshold: 0.01
+  _velocityThreshold: 0.1
   _interpolationSpeed: 15
   _interpolationCurve:
     serializedVersion: 2
@@ -190,8 +192,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 1
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -199,7 +201,7 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
+      inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
@@ -209,8 +211,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _maxTeleportDistance: 10
-  _useVelocityBasedInterpolation: 0
+  _useVelocityBasedInterpolation: 1
   _positionSmoothingFactor: 1
   _rotationSmoothingFactor: 1
-  _scaleSmoothingFactor: 1
-  syncPrecision: 0.001
+  _velocitySmoothingFactor: 1
+  _predictPhysics: 1
+  _predictionTime: 0.1
+  _predictionSteps: 3
+  _smoothAngularVelocity: 1
+  _angularVelocitySmoothing: 0.1

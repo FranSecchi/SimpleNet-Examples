@@ -171,6 +171,7 @@ MonoBehaviour:
   _syncPosition: 0
   _syncRotation: 1
   _syncScale: 0
+  syncPrecision: 0.01
   _positionThreshold: 0.01
   _rotationThreshold: 0.01
   _scaleThreshold: 0.01
@@ -204,7 +205,6 @@ MonoBehaviour:
   _positionSmoothingFactor: 1
   _rotationSmoothingFactor: 1
   _scaleSmoothingFactor: 1
-  syncPrecision: 0.01
 --- !u!1 &6465998219824417183
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5075756fe3633d248b1aab1a963ee214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: eac400ea-995b-4d62-99f5-c38247b8197d
+  sceneId: 89b520c3-7e6a-4397-a840-17a13b6243da
 --- !u!114 &4659731685506470826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +582,7 @@ MonoBehaviour:
   _syncPosition: 1
   _syncRotation: 1
   _syncScale: 0
+  syncPrecision: 0.001
   _positionThreshold: 0.01
   _rotationThreshold: 0.01
   _scaleThreshold: 0.01
@@ -592,8 +593,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -611,11 +612,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _maxTeleportDistance: 10
-  _useVelocityBasedInterpolation: 0
+  _useVelocityBasedInterpolation: 1
   _positionSmoothingFactor: 1
-  _rotationSmoothingFactor: 1
+  _rotationSmoothingFactor: 2.01
   _scaleSmoothingFactor: 1
-  syncPrecision: 0.01
 --- !u!114 &5170359341295200436
 MonoBehaviour:
   m_ObjectHideFlags: 0

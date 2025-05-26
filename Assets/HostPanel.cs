@@ -24,7 +24,7 @@ public class HostPanel : MonoBehaviour
             case GameMode.Pong:
                 info = new ServerInfo()
                 {
-                    ServerName = "Pong",
+                    ServerName = "Server Pong",
                     GameMode = "Pong",
                     MaxPlayers = 4
                 };
@@ -33,17 +33,17 @@ public class HostPanel : MonoBehaviour
             case GameMode.PvP:
                 info = new ServerInfo()
                 {
-                    ServerName = "PvP",
+                    ServerName = "Server PvP",
                     GameMode = "PvP",
-                    MaxPlayers = 4
+                    MaxPlayers = 8
                 };
                 NameScene = "PvP";
                 break;
             case GameMode.Test:
                 info = new ServerInfo()
                 {
-                    ServerName = "Test",
-                    GameMode = "Test",
+                    ServerName = "Server Ping",
+                    GameMode = "Ping",
                     MaxPlayers = 4
                 };
                 NameScene = "Test";
