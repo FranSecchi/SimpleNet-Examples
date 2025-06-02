@@ -69,7 +69,6 @@ public class HostPanel : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        ServerNameText.text = NetManager.ServerName;
 
         if (NetManager.AllPlayers.Count > 1)
         {
