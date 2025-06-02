@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using NetPackage.Network;
+using SimpleNet.Network;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InfoPanel : MonoBehaviour
 {
     public float infoInterval;
     public GameObject infoPanel;
+    public GameObject backPanel;
     public TextMeshProUGUI pingText;
     public TextMeshProUGUI packetLossText;
     public TextMeshProUGUI serverNameText;
@@ -25,6 +25,21 @@ public class InfoPanel : MonoBehaviour
             infoPanel.SetActive(!infoPanel.activeSelf);
         }
         if(infoPanel.activeSelf) ShowConnectionInfo();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            backPanel.SetActive(!backPanel.activeSelf);
+            if(SceneManager.GetActiveScene().name == "PvP") Cursor.lockState = backPanel.activeSelf? CursorLockMode.None : CursorLockMode.Locked;
+        }
+    }
+
+    public void ExitGame()
+    {
+        NetManager.StopLan();
+        SceneManager.LoadScene("Menu");
+    }
+    public void Resume()
+    {
+        backPanel.SetActive(false);
     }
     private void ShowConnectionInfo()
     {

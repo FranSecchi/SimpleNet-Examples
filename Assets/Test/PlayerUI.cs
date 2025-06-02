@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using NetPackage.Network;
-using NetPackage.Synchronization;
+using SimpleNet.Network;
+using SimpleNet.Synchronization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,7 +43,7 @@ public class PlayerUI : NetBehaviour
 
     public void OnColorButtonClick()
     {
-        if(!isOwned)
+        if(!IsOwned)
             CallRPC("RequestColorChange", playerId + 2);
     }
     public void OnPingButtonClick()
@@ -55,7 +52,6 @@ public class PlayerUI : NetBehaviour
             CallRPC("PingAllPlayers");
     }
     
-    // Bidirectional RPC example
     [NetRPC]
     private void PingAllPlayers()
     {
@@ -63,13 +59,11 @@ public class PlayerUI : NetBehaviour
         renderer.material.color = ColorButton.image.color;
     }
 
-    // Client-to-Server RPC with server response
     [NetRPC]
     private void RequestColorChange(int id)
     {
         if (!NetManager.IsHost)
             return;
-        // Server generates a random color
         Color newColor = new Color(
             UnityEngine.Random.value,
             UnityEngine.Random.value,

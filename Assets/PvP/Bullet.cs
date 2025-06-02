@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using NetPackage.Network;
-using NetPackage.Synchronization;
+using SimpleNet.Network;
+using SimpleNet.Synchronization;
 using UnityEngine;
 
 public class Bullet : NetBehaviour

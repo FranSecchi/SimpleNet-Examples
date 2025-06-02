@@ -1256,6 +1256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoInterval: 0.2
   infoPanel: {fileID: 5157928684076042028}
+  backPanel: {fileID: 0}
   pingText: {fileID: 5881888525686412483}
   packetLossText: {fileID: 8562599665501227336}
   serverNameText: {fileID: 5728916277908608998}

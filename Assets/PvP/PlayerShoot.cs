@@ -1,6 +1,5 @@
-using System;
-using NetPackage.Network;
-using NetPackage.Synchronization;
+using SimpleNet.Network;
+using SimpleNet.Synchronization;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -22,7 +21,7 @@ public class PlayerShoot : NetBehaviour
     }
     private void Update()
     {
-        if (!isOwned)
+        if (!IsOwned)
             return;
         // Check if enough time has passed since last shot and if fire button is pressed
         if (nextFireTime >= fireRate && Input.GetButtonDown("Fire1"))

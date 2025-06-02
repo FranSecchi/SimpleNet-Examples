@@ -1,6 +1,6 @@
-using NetPackage.Network;
 using TMPro;
-using NetPackage.Transport;
+using SimpleNet.Network;
+using SimpleNet.Transport;
 using UnityEngine;
 using UnityEngine.UI;
 

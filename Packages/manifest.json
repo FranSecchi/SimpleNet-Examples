@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.franysan.netpackage": "https://github.com/FranSecchi/NetPackage.git",
+    "com.franysan.simplenet": "https://github.com/FranSecchi/SimpleNet.git",
     "com.unity.collab-proxy": "2.8.2",
     "com.unity.feature.development": "1.0.2",
     "com.unity.timeline": "1.8.6",

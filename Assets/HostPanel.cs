@@ -1,8 +1,7 @@
-using NetPackage.Network;
-using NetPackage.Transport;
+using SimpleNet.Network;
+using SimpleNet.Transport;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HostPanel : MonoBehaviour

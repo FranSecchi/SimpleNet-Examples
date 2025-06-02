@@ -168,15 +168,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _syncPosition: 0
-  _syncRotation: 1
-  _syncScale: 0
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 1
   syncPrecision: 0.01
-  _positionThreshold: 0.01
-  _rotationThreshold: 0.01
-  _scaleThreshold: 0.01
-  _interpolationSpeed: 5
-  _interpolationCurve:
+  positionThreshold: 0.01
+  rotationThreshold: 0.01
+  scaleThreshold: 0.01
+  interpolationSpeed: 10
+  interpolationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -200,11 +200,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _maxTeleportDistance: 10
-  _useVelocityBasedInterpolation: 0
-  _positionSmoothingFactor: 1
-  _rotationSmoothingFactor: 1
-  _scaleSmoothingFactor: 1
+  maxTeleportDistance: 10
+  useVelocityBasedInterpolation: 0
+  positionSmoothingFactor: 1
+  rotationSmoothingFactor: 1
+  scaleSmoothingFactor: 1
 --- !u!1 &6465998219824417183
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5075756fe3633d248b1aab1a963ee214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: 89b520c3-7e6a-4397-a840-17a13b6243da
+  sceneId: 1d4e39ee-514b-4a7e-b8c4-665693362f08
 --- !u!114 &4659731685506470826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,22 +579,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5e81ee0aa65414a97097d7637477c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _syncPosition: 1
-  _syncRotation: 1
-  _syncScale: 0
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 1
   syncPrecision: 0.001
-  _positionThreshold: 0.01
-  _rotationThreshold: 0.01
-  _scaleThreshold: 0.01
-  _interpolationSpeed: 15
-  _interpolationCurve:
+  positionThreshold: 0.01
+  rotationThreshold: 0.01
+  scaleThreshold: 0.01
+  interpolationSpeed: 10
+  interpolationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 1
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
+      inSlope: 1
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
@@ -611,11 +611,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _maxTeleportDistance: 10
-  _useVelocityBasedInterpolation: 1
-  _positionSmoothingFactor: 1
-  _rotationSmoothingFactor: 2.01
-  _scaleSmoothingFactor: 1
+  maxTeleportDistance: 10
+  useVelocityBasedInterpolation: 0
+  positionSmoothingFactor: 1
+  rotationSmoothingFactor: 1
+  scaleSmoothingFactor: 1
 --- !u!114 &5170359341295200436
 MonoBehaviour:
   m_ObjectHideFlags: 0

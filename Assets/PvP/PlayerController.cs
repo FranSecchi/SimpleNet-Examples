@@ -1,6 +1,5 @@
-using System;
-using NetPackage.Network;
-using NetPackage.Synchronization;
+using SimpleNet.Network;
+using SimpleNet.Synchronization;
 using UnityEngine;
 
 public class PlayerController : NetBehaviour
@@ -52,7 +51,7 @@ public class PlayerController : NetBehaviour
 
     private void Update()
     {
-        if (!isOwned)
+        if (!IsOwned)
             return;
         HandleMouseLook();
         HandleMovement();
